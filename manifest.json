@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "LeetMate",
+  "description": "Your coding buddy that keeps distractions away and redirects you to LeetCode for non-stop problem-solving!",
+  "version": "1.0",
+  "host_permissions": ["*://*/*"],
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
